@@ -23,7 +23,6 @@ class MidjourneyApi():
         self.download_image()
 
     def send_message(self):
-        print("sending message")
         url = "https://discord.com/api/v9/interactions"
         data = {
             "type": 2,
@@ -73,16 +72,14 @@ class MidjourneyApi():
         response = requests.post(url, headers=headers, json=data)
 
     def get_message(self):
-        print("getting message")
         headers = {
             'Authorization': self.authorization,
             "Content-Type": "application/json",
         }
         for i in range(3):
             time.sleep(30)
-            print("try ", i)
             try:
-                response = requests.get('https://discord.com/api/v9/channels/1109918410873249865/messages', headers=headers)
+                response = requests.get(f'https://discord.com/api/v9/channels/{self.channel_id}/messages', headers=headers)
                 messages = response.json()
                 most_recent_message_id = messages[0]['id']
                 self.message_id = most_recent_message_id
@@ -96,7 +93,6 @@ class MidjourneyApi():
                 ValueError("Timeout")
                 
     def choose_images(self):
-        print("choosing image")
         url = "https://discord.com/api/v9/interactions"
         headers = {
             "Authorization": self.authorization,
@@ -118,16 +114,14 @@ class MidjourneyApi():
         response = requests.post(url, headers=headers, data=json.dumps(data))
 
     def download_image(self):
-        print("downloading image")
         headers = {
             'Authorization': self.authorization,
             "Content-Type": "application/json",
         }
         for i in range(3):
             time.sleep(30)
-            print("try ", i)
             try:
-                response = requests.get('https://discord.com/api/v9/channels/1109918410873249865/messages', headers=headers)
+                response = requests.get(f'https://discord.com/api/v9/channels/{self.channel_id}/messages', headers=headers)
                 messages = response.json()
                 most_recent_message_id = messages[0]['id']
                 self.message_id = most_recent_message_id
@@ -145,8 +139,3 @@ class MidjourneyApi():
     def image_path(self):
         return self.image_path_str
     
-
-
-
-
-instance = MidjourneyApi("mister mijakj")

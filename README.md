@@ -44,7 +44,7 @@ you need to import the api with:
 
 13. call the api as following `midjourney = MidjourneyApi(prompt="Yoda", application_id="application_id", guild_id="guild_id", channel_id="channel_id", version="version", id="id", authorization="authorization")`
 
-
+Give everything 1-2 minutes and you should see your generated image inside the `images` folder.
 
 ## Example projects which are build with the api 
 
