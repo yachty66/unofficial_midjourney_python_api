@@ -1,53 +1,54 @@
-# unofficial_midjourney_python_api
+# Midjourney Python API (Unofficial)
 
-## welcome to the unofficial midjourney api  💭🛳️🌅
+Welcome aboard the unofficial Midjourney API 🎈🚀. A Python wrapper around the midjourney software to generate AI-based images.
 
-follow the steps to make it run on your computer:
+## Setup & Installation
 
-1. git clone https://github.com/yachty66/unofficial_midjourney_python_api.git
+To get started, follow the steps below to run it on your machine:
 
-2. install requirements from requirements.txt
+1. Clone the repository:
+    ```shell
+    git clone https://github.com/yachty66/unofficial_midjourney_python_api.git
+    ```
+2. Install the required packages from `requirements.txt`.
 
-2. if you have a folder structure like and you want to use the api in a file called main.py:
+3. If your folder structure resembles the one shown below and you wish to use the API in a file named `main.py`:
+    ```shell
+    project_directory
+    │   main.py
+    │
+    └───unofficial_midjourney_python_api
+        │   midjourney_api.py
+    ```
+   Then, you can import the API in `main.py` as follows:
+    ```python 
+    from unofficial_midjourney_python_api.midjourney_api import MidjourneyApi
+    ```
 
-```markdown 
-project_directory
-│   main.py
-│
-└───unofficial_midjourney_python_api
-    │   midjourney_api.py
-```
+4. If you haven't subscribed to midjourney yet, you should do so now.
 
-you need to import the api with:
+5. With the same Discord account you used for midjourney subscription, create a new server (name isn't crucial) and add the midjourney bot from midjourney to this server.
 
-`from unofficial_midjourney_python_api.midjourney_api import MidjourneyApi`
+6. Next, you need to gather specific information to call the API appropriately - prompt, application_id, guild_id, channel_id, version, id, and authorization. 
 
-4. if you dont have a subscription to midjourney yet go and make one
+7. Navigate to your discord server, open your developer console (on mac, you can use fn+f12), and open the network tab. 
 
-5. in the same discord account where you described to midjourney create a new server (name doesnt matter) and add the midjourney bot from midjourney to this server
+8. Activate the midjourney bot with the slash command `/imagine` followed by an arbitrary prompt, then click on the `interactions` option.  
 
-6. go to https://discord.com/developers/applications and create a new bot. 
+9. Firstly, visit the `Headers` tab and note down your `Authorization` key. Then, navigate to the `payload` window and save the application_id, guild_id, channel_id, version, id, and authorization values from the JSON.
 
-7. go to oAuth2 - url generator and under permisson click bot and administrator in the checkboxes which show up after that. 
+10. In your project root, create a new folder named `images`. Any image created by the API will be saved here.
 
-8. copy and paste the generated url in your browser and add the bot to the server you just created
+11. Invoke the API as follows:
+    ```python
+    midjourney = MidjourneyApi(prompt="Yoda", application_id="application_id", guild_id="guild_id", channel_id="channel_id", version="version", id="id", authorization="authorization")
+    ```
+Wait for about 1-2 minutes, and you should find your generated image within the `images` folder.
 
-9. Next you need to get all the information to call the api appropriately - prompt, application_id, guild_id, channel_id, version, id, authorization. 
+## Showcase of Projects Built with This API
 
-10. go to your your discord server and open your developer console (on mac with fn+f12) and open the network tab. 
+- [Celebrity Differences](https://twitter.com/celebritydiff)
 
-11. trigger the midjourney bot with the slash command `/imagine` and some arbitrary prompt and click after that click on the name `interactions`.  
+Have you created an exciting project using our API? DM me the details at [Twitter](https://twitter.com/MaxHager66)!
 
-12. first go the `Headers` tab and save the your `Authorization` key and than go to the `payload` window and save application_id, guild_id, channel_id, version, id, and authorizatio from the json. 
-
-13. create a folder called `images`in the root of the project (the image created by the api will land there)
-
-13. call the api as following `midjourney = MidjourneyApi(prompt="Yoda", application_id="application_id", guild_id="guild_id", channel_id="channel_id", version="version", id="id", authorization="authorization")`
-
-Give everything 1-2 minutes and you should see your generated image inside the `images` folder.
-
-## Example projects which are build with the api 
-
-https://twitter.com/celebritydiff 
-
-DM me your project at https://twitter.com/MaxHager66
+Happy journeying with Midjourney API!
