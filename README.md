@@ -27,7 +27,7 @@ To get started, follow the steps below to run it on your machine:
 
 4. If you haven't subscribed to midjourney yet, you should do so now.
 
-5. With the same Discord account you used for midjourney subscription, create a new server (name isn't crucial) and add the midjourney bot from midjourney to this server.
+5. With the same Discord account you used for your midjourney subscription, create a new server (name isn't crucial) and add the midjourney bot from midjourney to this server.
 
 6. Next, you need to gather specific information to call the API appropriately - prompt, application_id, guild_id, channel_id, version, id, and authorization. 
 
@@ -35,13 +35,13 @@ To get started, follow the steps below to run it on your machine:
 
 8. Activate the midjourney bot with the slash command `/imagine` followed by an arbitrary prompt, then click on the `interactions` option.  
 
-9. Firstly, visit the `Headers` tab and note down your `Authorization` key. Then, navigate to the `payload` window and save the application_id, guild_id, channel_id, version, id, and authorization values from the JSON.
+9. Firstly, visit the `Headers` tab and note down your `Authorization` key. Then, navigate to the `Payload` window and save the application_id, guild_id, channel_id, version, id, and authorization values from the JSON.
 
 10. In your project root, create a new folder named `images`. Any image created by the API will be saved here.
 
 11. Invoke the API as follows:
     ```python
-    midjourney = MidjourneyApi(prompt="Yoda", application_id="application_id", guild_id="guild_id", channel_id="channel_id", version="version", id="id", authorization="authorization")
+    midjourney = MidjourneyApi(prompt="prompt", application_id="application_id", guild_id="guild_id", channel_id="channel_id", version="version", id="id", authorization="authorization")
     ```
 Wait for about 1-2 minutes, and you should find your generated image within the `images` folder.
 
@@ -49,6 +49,6 @@ Wait for about 1-2 minutes, and you should find your generated image within the 
 
 - [Celebrity Differences](https://twitter.com/celebritydiff)
 
-Have you created an exciting project using our API? DM me the details at [Twitter](https://twitter.com/MaxHager66)!
+Have you created an exciting project using the API? DM me the details at [Twitter](https://twitter.com/MaxHager66)!
 
 Happy journeying with Midjourney API!
