@@ -47,7 +47,7 @@ Wait for about 1-2 minutes, and you should find your generated image within the 
 
 ## Showcase of Projects Built with This API
 
-- [Celebrity Differences](https://twitter.com/celebritydiff)
+- [CelebrityDiffusion](https://twitter.com/celebritydiff)
 
 Have you created an exciting project using the API? DM me the details at [Twitter](https://twitter.com/MaxHager66)!
 
