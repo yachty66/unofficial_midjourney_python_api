@@ -2,6 +2,8 @@
 
 Welcome aboard the unofficial Midjourney API 🎈🚀. A Python wrapper around the midjourney software to generate AI-based images.
 
+![Example Image](ship_readme.png)
+
 ## Setup & Installation
 
 To get started, follow the steps below to run it on your machine:
